@@ -49,6 +49,22 @@
   }
 }
 
+// ===============FOOTER==================
+footer {
+  background-color: #02182B;
+  color: #E3F4F8;
+  height: 160px;
+  padding: 30px;
+
+  img {
+    margin: 0 10px;
+  }
+
+  p {
+    margin: 15px 0;
+  }
+}
+
 // ===============SECTION: CONTACT-DETAILS==================
 section#about {
   .panel {
@@ -93,5 +109,4 @@ section#about {
   align-items: center;
   display: flex;
   justify-content: center;
-
 }
