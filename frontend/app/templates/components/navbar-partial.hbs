@@ -1,11 +1,22 @@
-{{#bs-navbar type='inverse' fluid=fluid collapsed=collapsed onCollapse=(action (mut collapsed) true) onExpand=(action (mut collapsed) false) as |navbar|}}
-  <div class="navbar-header">
-    {{navbar.toggle}}
-    {{#link-to "index" class="navbar-brand"}}Daniel The Developer{{/link-to}}
-  </div>
-  {{#navbar.content}}
-    {{#navbar.nav as |nav|}}
-      <!-- {{#nav.item}}{{#nav.link-to "about"}}About Me{{/nav.link-to}}{{/nav.item}} -->
-    {{/navbar.nav}}
-  {{/navbar.content}}
+{{#bs-navbar fluid=fluid collapsed=collapsed onCollapse=(action (mut collapsed) true) onExpand=(action (mut collapsed) false) as |navbar|}}
+  <!-- <div class='container-fluid'> -->
+    <div class="navbar-header">
+      {{navbar.toggle}}
+      {{#link-to "index" class="navbar-brand"}}
+        <div class='row'>
+          <div class='col-xs-4'>
+            <img src='assets/images/gohdaniel.png' class='button rounded'/>
+          </div>
+          <div class='col-xs-8'>
+            Daniel The Developer
+          </div>
+        </div>
+      {{/link-to}}
+    </div>
+    {{#navbar.content}}
+      {{#navbar.nav as |nav|}}
+        {{#nav.item}}{{#nav.link-to "about"}}About Me{{/nav.link-to}}{{/nav.item}}
+      {{/navbar.nav}}
+    {{/navbar.content}}
+  <!-- </div> -->
 {{/bs-navbar}}
