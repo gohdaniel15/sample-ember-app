@@ -95,6 +95,7 @@ section#about {
   }
 }
 
+// ===============IMG CLASSES==================
 .rounded {
   border-radius: 50%;
 }
@@ -102,6 +103,11 @@ section#about {
 .button {
   height: 50px;
   width: 50px;
+}
+
+.project-thumnail {
+  height: 100px;
+  width: 250px;
 }
 
 .flex-center {

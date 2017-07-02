@@ -4,9 +4,9 @@
 
     <div class='jumbotron'>
       <div class='text-left'>
-        <h1>Love my wife.</h1>
-        <h2>Ride my bicycle.</h2>
-        <h3>Code.</h3>
+        <h1>Write code.</h1>
+        <h2>Love my wife.</h2>
+        <h3>Ride my bicycle.</h3>
       </div>
     </div>
 
@@ -17,7 +17,10 @@
             <strong>Find out what I've been up to</strong>
           </div>
           <div class='panel-body'>
-
+            {{#each model as |project|}}
+              {{#projects-partial item=project}}
+              {{/projects-partial}}
+            {{/each}}
           </div>
         </div>
       </div>
