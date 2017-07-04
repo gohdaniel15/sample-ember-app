@@ -1,0 +1,16 @@
+<%= simple_form_for @project, url: admin_projects_path do |form| %>
+
+  <%= form.error_notification %>
+
+  <%= form.input :title %>
+  <%= form.input :description %>
+
+  <%= form.simple_fields_for :project_images do |f| %>
+
+    <%= f.filepicker_field :filepicker_url %>
+
+  <% end %>
+
+  <%= form.submit %>
+
+<% end %>

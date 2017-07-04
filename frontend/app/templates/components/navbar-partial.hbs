@@ -1,5 +1,5 @@
 {{#bs-navbar fluid=fluid collapsed=collapsed onCollapse=(action (mut collapsed) true) onExpand=(action (mut collapsed) false) as |navbar|}}
-  <!-- <div class='container-fluid'> -->
+  <div class='container-fluid'>
     <div class="navbar-header">
       {{navbar.toggle}}
       {{#link-to "index" class="navbar-brand"}}
@@ -15,8 +15,8 @@
     </div>
     {{#navbar.content}}
       {{#navbar.nav as |nav|}}
-        {{#nav.item}}{{#nav.link-to "about"}}About Me{{/nav.link-to}}{{/nav.item}}
+        {{#nav.item}}{{#nav.link-to "me"}}About Me{{/nav.link-to}}{{/nav.item}}
       {{/navbar.nav}}
     {{/navbar.content}}
-  <!-- </div> -->
+  </div>
 {{/bs-navbar}}

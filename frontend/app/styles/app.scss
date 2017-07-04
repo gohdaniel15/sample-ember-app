@@ -1,9 +1,15 @@
 @import "ember-bootstrap/bootstrap";
 
+body {
+  background-color: #F7FFF7;
+  font-family: 'Poppins';
+}
+
 // ===============NAVBAR==================
 .navbar {
-  background-color: #02182B;
+  background-color: #FF6B6B;
   border-radius: 0;
+  margin-bottom: 0;
   min-height: 80px;
 
   .navbar-header {
@@ -11,6 +17,15 @@
     display: flex;
     min-height: 80px;
     justify-content: center;
+
+    .navbar-toggle {
+      &:active { background-color: transparent; }
+      &:focus { background-color: transparent; }
+    }
+
+    .icon-bar {
+      background-color: #FFE66D;
+    }
 
     .navbar-brand {
       align-items: center;
@@ -35,7 +50,7 @@
 
       .active > a {
         background-color: inherit;
-        color: #E3F4F8;
+        color: #FFE66D;
         font-weight: bold;
       }
     }
@@ -43,7 +58,9 @@
       width: 100%;
 
       &:hover {
-        border-bottom: 2px solid #fff;
+        a {
+          color: #FFE66D;
+        }
       }
     }
   }
@@ -51,7 +68,7 @@
 
 // ===============FOOTER==================
 footer {
-  background-color: #02182B;
+  background-color: #1A535C;
   color: #E3F4F8;
   height: 160px;
   padding: 30px;
@@ -66,29 +83,40 @@ footer {
 }
 
 // ===============SECTION: CONTACT-DETAILS==================
-section#about {
+section#about,
+section#contact-me {
+  .content-header {
+    font-size: 20px;
+    margin: 50px 0;
+  }
+
   .panel {
+    background-color: transparent;
     border: 0;
     box-shadow: none;
+    margin-bottom: 0;
 
     .panel-heading {
+      background-color: #FF6B6B;
       border: 0;
       border-radius: 6px;
+      color: #E3F4F8;
       padding: 15px;
       font-size: 18px;
     }
 
     .panel-body {
       .row {
-        background-color: #C8E9F1;
-        border: 1px solid #333;
+        background-color: rgba(78, 205, 196, 0.3);
+        border: 0;
         border-radius: 6px;
+        box-shadow: 2px 2px 5px #888888;
         margin-top: 15px;
         margin-bottom: 15px;
         padding: 15px;
 
         &:hover {
-          background-color: #9EDAE8;
+          background-color: rgba(78, 205, 196, 0.8);
         }
       }
     }
@@ -105,9 +133,14 @@ section#about {
   width: 50px;
 }
 
-.project-thumnail {
+.large {
+  margin: 30px 0;
+  max-height: 300px;
+}
+
+.project-thumbnail {
   height: 100px;
-  width: 250px;
+  width: 100px;
 }
 
 .flex-center {

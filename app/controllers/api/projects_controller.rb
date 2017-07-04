@@ -1,12 +1,8 @@
 class Api::ProjectsController < ApplicationController
 
   def index
-    @projects = Project.all
-    render json: @projects
-  end
-
-  def create
-    @project = Project.new()
+    @projects = Project.all.order(created_at: :desc)
+    render json: @projects, include: ['project_images']
   end
 
 end

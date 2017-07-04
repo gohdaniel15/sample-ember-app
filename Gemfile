@@ -14,6 +14,12 @@ gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+# Front end framework
+gem 'bootstrap-sass', '~> 3.3.6'
+# Forms made easy for Rails! It's tied to a simple DSL, with no opinion on markup.
+gem 'simple_form'
+# Use jquery as the JavaScript library
+gem 'jquery-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -35,6 +41,9 @@ gem 'jbuilder', '~> 2.5'
 # Unify your EmberCLI and Rails Workflows
 gem 'ember-cli-rails'
 gem 'active_model_serializers'
+gem 'devise'
+gem 'filestack-rails', require: 'filepicker-rails'
+gem 'dotenv-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
