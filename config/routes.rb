@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  mount_ember_app :frontend, to: '/about'
-
   namespace :api do
     resources :projects, only: [:index]
     resources :project_images, only: [:index, :show]
@@ -14,5 +12,7 @@ Rails.application.routes.draw do
 
     resources :projects, only: [:new, :create]
   end
+
+  mount_ember_app :frontend, to: '/'
 
 end
