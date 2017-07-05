@@ -1,0 +1,40 @@
+<div class="form-horizontal">
+  <div class="form-group">
+    <label class="col-sm-2 control-label {{item.isPresentName}}">Name</label>
+    <div class="col-sm-10">
+      {{input type="text" value=item.name class="form-control" placeholder="Your name"}}
+      {{#if item.isPresentName}}
+      <p class='validator-message'>
+        <span class="glyphicon glyphicon-ok"></span> Hello {{item.name}}!
+      </p>
+      {{/if}}
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label {{item.isValidEmail}}">Email Address</label>
+    <div class="col-sm-10">
+      {{input type="text" value=item.email class="form-control" placeholder="Your email address, so I can reply to you"}}
+      {{#if item.isValidEmail}}
+        <p class='validator-message'>
+           <span class="glyphicon glyphicon-ok"></span> Your email address is {{item.email}}!
+        </p>
+      {{/if}}
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label {{item.isPresentMessage}}">Message</label>
+    <div class="col-sm-10">
+      {{textarea type="text" value=item.message class="form-control" placeholder="Your message" rows="5"}}
+      {{#if item.isPresentMessage}}
+        <p class='validator-message'>
+          <span class="glyphicon glyphicon-ok"></span> You've entered a message!
+        </p>
+      {{/if}}
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-4 col-sm-4 col-xs-12">
+      <button {{action "buttonClicked" item}} type="submit" class="btn btn-custom btn-lg col-xs-12" disabled={{unless item.isValid true}}>Send message</button>
+    </div>
+  </div>
+</div>

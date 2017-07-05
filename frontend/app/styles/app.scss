@@ -149,3 +149,20 @@ section#contact-me {
   display: flex;
   justify-content: center;
 }
+
+// ===============BTN CLASSES==================
+.btn-custom {
+  background-color: #FFE66D;
+  box-shadow: 2px 2px 5px #888888;
+}
+
+// ===============FORM CLASSES==================
+
+.true {
+  color: green;
+}
+
+.validator-message {
+  font-size: 10px;
+  margin: 5px 0;
+}

@@ -21,7 +21,7 @@
             <strong>Recent activities</strong>
           </div>
           <div class='panel-body'>
-            {{#each model as |project|}}
+            {{#each projects as |project|}}
               {{#projects-partial item=project}}
               {{/projects-partial}}
             {{/each}}
@@ -108,9 +108,32 @@
         <strong>Leave me a message!</strong>
       </div>
       <div class='panel-body'>
-        <p>
-          All messages will be sent to my email <strong>gohdaniel15@gmail.com</strong>. You can email me directly at that address if you prefer :)
-        </p>
+        {{#if responseMessage}}
+
+          <br/>
+          <div class='alert alert-success col-xs-12'>
+            <p>Thank you {{contact.name}}! An email has been sent to <strong>gohdaniel15@gmail.com</strong>. I will respond to you as soon as I can!</p>
+            <br/>
+            <p>
+              <strong>Sender:</strong> {{contact.name}} ({{contact.email}})
+            </p>
+            <p>
+              <strong>Message:</strong>
+            </p>
+            <p>
+              {{contact.message}}
+            </p>
+          </div>
+
+        {{else}}
+
+          <p>
+            All messages will be sent to my email <strong>gohdaniel15@gmail.com</strong>. You can email me directly at that address if you prefer :)
+          </p>
+          {{#contact-form item=contact action='createContact'}}
+          {{/contact-form}}
+
+        {{/if}}
       </div>
     </div>
   </div>
