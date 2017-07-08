@@ -8,5 +8,6 @@ class Project < ApplicationRecord
   validates :description, presence: true
 
   accepts_nested_attributes_for :project_images
+  accepts_nested_attributes_for :tags
 
 end

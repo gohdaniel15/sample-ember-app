@@ -115,6 +115,11 @@ section#contact-me {
         margin-bottom: 15px;
         padding: 15px;
 
+        @media only screen and (min-width : 768px) {
+          display: flex;
+          align-items: center;
+        }
+
         &:hover {
           background-color: rgba(78, 205, 196, 0.8);
         }
@@ -169,5 +174,6 @@ section#contact-me {
 
 // ===============LABEL CLASSES==================
 .tag-label {
+  display: inline-block;
   background-color: #1A535C;
 }

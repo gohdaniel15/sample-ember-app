@@ -1,0 +1,40 @@
+<div class='container'>
+
+  <div class='row'>
+    <div class='col-xs-12'>
+      <%= link_to 'New project', new_admin_project_path, class: 'btn btn-primary'%>
+    </div>
+  </div>
+
+  <div class='row'>
+
+    <div class='col-xs-12'>
+
+      <% @projects.each do |project| %>
+
+        <div class='panel panel-default'>
+          <div class='panel-heading'>
+            <%= project.title %>
+          </div>
+          <div class='panel-body'>
+            <p>
+              <%= project.description %>
+            </p>
+            <% project.tags&.each do |tag| %>
+              <div class='label label-default'>
+                <%= tag.name %>
+              </div>
+            <% end %>
+          </div>
+          <div class='panel-footer'>
+            <%= link_to 'Edit', edit_admin_project_path(project) %>
+          </div>
+        </div>
+
+      <% end %>
+
+    </div>
+
+  </div>
+
+</div>

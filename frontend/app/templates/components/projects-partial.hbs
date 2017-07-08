@@ -21,9 +21,11 @@
     </div>
     <div class='row'>
       <div class='col-xs-12'>
-        {{#each item.tags as |tag|}}
-        <span class="label tag-label">{{tag.name}}</span>
-        {{/each}}
+        <p>
+          {{#each item.tags as |tag|}}
+            <span class="label tag-label">{{tag.name}}</span>
+          {{/each}}
+        </p>
       </div>
     </div>
   </div>
