@@ -106,7 +106,7 @@ section#contact-me {
     }
 
     .panel-body {
-      .row {
+      .content-row {
         background-color: rgba(78, 205, 196, 0.3);
         border: 0;
         border-radius: 6px;
@@ -165,4 +165,9 @@ section#contact-me {
 .validator-message {
   font-size: 10px;
   margin: 5px 0;
+}
+
+// ===============LABEL CLASSES==================
+.tag-label {
+  background-color: #1A535C;
 }

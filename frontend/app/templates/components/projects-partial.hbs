@@ -1,15 +1,30 @@
-<div class='row activity'>
+<div class='row content-row'>
   <div class='col-sm-4 text-center'>
     {{#each item.project_images as |image|}}
       <img src='{{image.filepicker_url}}' class='project-thumbnail rounded'/>
     {{/each}}
   </div>
   <div class='col-sm-8'>
-    <h5>
-      <strong>{{item.title}}</strong>
-    </h5>
-    <p>
-      {{item.description}}
-    </p>
+    <div class='row'>
+      <div class='col-xs-12'>
+        <h5>
+          <strong>{{item.title}}</strong>
+        </h5>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-xs-12'>
+        <p>
+          {{item.description}}
+        </p>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-xs-12'>
+        {{#each item.tags as |tag|}}
+        <span class="label tag-label">{{tag.name}}</span>
+        {{/each}}
+      </div>
+    </div>
   </div>
 </div>
